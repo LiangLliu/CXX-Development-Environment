@@ -1,0 +1,35 @@
+{
+  "name": "C++ Development Environment",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "remoteUser": "vscode",
+  "containerUser": "vscode",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {},
+    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {},
+    "ghcr.io/devcontainers-contrib/features/neovim-apt-get:1": {}
+  },
+  "mounts": [
+    "source=/var/test,target=/workspace,type=bind"
+  ],
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopContainer",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+		"mhutchie.git-graph",
+		"eamodio.gitlens",
+		"ms-azuretools.vscode-docker",
+		"github.vscode-github-actions",
+		"johnpapa.vscode-peacock",
+		"timonwong.shellcheck",
+		"robertz.code-snapshot"
+	],
+      "settings": {
+        "editor.tabSize": 4,
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      }
+    }
+  }
+}
