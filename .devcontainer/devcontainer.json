@@ -7,28 +7,24 @@
   "containerUser": "vscode",
   "features": {
     "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {},
-    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {},
-    "ghcr.io/devcontainers-contrib/features/neovim-apt-get:1": {}
+    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {}
   },
   "mounts": [
-    "source=/var/test,target=/workspace,type=bind"
+    // "source=/var/test,target=/workspace,type=bind"
   ],
-  "workspaceFolder": "/workspace",
+  
+//   "workspaceFolder": "/workspace",
   "shutdownAction": "stopContainer",
   "customizations": {
     "vscode": {
       "extensions": [
 		"mhutchie.git-graph",
-		"eamodio.gitlens",
-		"ms-azuretools.vscode-docker",
-		"github.vscode-github-actions",
-		"johnpapa.vscode-peacock",
-		"timonwong.shellcheck",
-		"robertz.code-snapshot"
+		"eamodio.gitlens"
 	],
       "settings": {
         "editor.tabSize": 4,
-        "terminal.integrated.defaultProfile.linux": "zsh"
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "files.autoSave": "onFocusChange"
       }
     }
   }
